@@ -1,12 +1,7 @@
 # Node modules
 node_modules/**
 
-# Build output
-out/**
-dist/**
-*.map
-
-# Source
+# Source (exclude TS; we ship the compiled JS)
 src/**
 tsconfig.json
 
@@ -22,12 +17,15 @@ tsconfig.json
 # VS Code workspace
 .vscode/**
 
-# Test / coverage
+# Tests / coverage
 test/**
 coverage/**
 
 # Package artifacts
 *.vsix
 
-# Misc
+# Misc caches
 *.tsbuildinfo
+
+# Optional: exclude sourcemaps if you don’t want them in the VSIX
+# *.map
