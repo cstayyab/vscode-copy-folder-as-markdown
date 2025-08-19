@@ -1,0 +1,33 @@
+# Node modules
+node_modules/**
+
+# Build output
+out/**
+dist/**
+*.map
+
+# Source
+src/**
+tsconfig.json
+
+# Logs
+*.log
+
+# Git and GitHub
+.git/**
+.github/**
+.gitattributes
+.gitignore
+
+# VS Code workspace
+.vscode/**
+
+# Test / coverage
+test/**
+coverage/**
+
+# Package artifacts
+*.vsix
+
+# Misc
+*.tsbuildinfo

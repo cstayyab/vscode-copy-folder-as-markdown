@@ -7,7 +7,7 @@ yarn-error.log*
 # Build output
 dist/
 out/
-*.vsix
+*.map
 
 # TypeScript cache
 *.tsbuildinfo
@@ -18,9 +18,18 @@ out/
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# VS Code settings (optional)
+# VS Code workspace settings (optional)
 .vscode/
 
-# Coverage / test output
+# Coverage and test output
 coverage/
+test/
+
+# Package artifacts
+*.vsix
+
+# Local env/secrets
+.env
+*.local
