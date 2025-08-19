@@ -1,0 +1,90 @@
+{
+  "name": "copy-folder-as-markdown",
+  "displayName": "Copy Folder as Markdown",
+  "description": "Right-click any folder to copy all text files as a Markdown bundle with relative paths and code fences.",
+  "version": "0.1.0",
+  "publisher": "cstayyab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cstayyab/vscode-copy-folder-as-markdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cstayyab/vscode-copy-folder-as-markdown/issues"
+  },
+  "homepage": "https://github.com/cstayyab/vscode-copy-folder-as-markdown#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "keywords": [
+    "markdown",
+    "copy",
+    "export",
+    "docs",
+    "snippet",
+    "folder",
+    "clipboard",
+    "utility"
+  ],
+  "activationEvents": [
+    "onCommand:copyFolderAsMarkdown.copy"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyFolderAsMarkdown.copy",
+        "title": "Copy folder as Markdown"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "copyFolderAsMarkdown.copy",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Copy Folder as Markdown",
+      "properties": {
+        "copyFolderAsMarkdown.excludes": {
+          "type": "array",
+          "default": [
+            "**/.git/**",
+            "**/node_modules/**",
+            "**/.next/**",
+            "**/.expo/**",
+            "**/build/**",
+            "**/dist/**",
+            "**/.turbo/**",
+            "**/.cache/**"
+          ],
+          "description": "Glob patterns to exclude."
+        },
+        "copyFolderAsMarkdown.includes": {
+          "type": "array",
+          "default": ["**/*"],
+          "description": "Glob patterns to include."
+        },
+        "copyFolderAsMarkdown.maxFileSizeKB": {
+          "type": "number",
+          "default": 512,
+          "minimum": 1,
+          "description": "Skip files larger than this size in KB."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --platform=node --external:vscode",
+    "compile": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --platform=node --external:vscode --sourcemap",
+    "watch": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --platform=node --external:vscode --sourcemap --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.4"
+  },
+  "main": "./dist/extension.js"
+}
