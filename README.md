@@ -1,4 +1,8 @@
-# Copy Folder as Markdown
+<center>
+<img src="images/icon.png" />
+</center>
+
+ <center><h1>Copy Folder as Markdown</h1></center>
 
 Right-click any folder in the Explorer and choose **Copy folder as Markdown**.  
 The extension walks the folder recursively, reads only text files, and copies a single Markdown string to your clipboard.
