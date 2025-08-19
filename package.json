@@ -87,5 +87,6 @@
     "esbuild": "^0.21.5",
     "typescript": "^5.5.4"
   },
-  "main": "./dist/extension.js"
+  "main": "./dist/extension.js",
+  "files": ["dist/**", "package.json", "README.md", "LICENSE.md"]
 }
