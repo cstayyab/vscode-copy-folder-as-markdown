@@ -4,6 +4,7 @@
   "description": "Right-click any folder to copy all text files as a Markdown bundle with relative paths and code fences.",
   "version": "0.1.0",
   "publisher": "cstayyab",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/cstayyab/vscode-copy-folder-as-markdown.git"
