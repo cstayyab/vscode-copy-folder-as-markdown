@@ -2,7 +2,7 @@
   "name": "copy-folder-as-markdown",
   "displayName": "Copy Folder as Markdown",
   "description": "Right-click any folder to copy all text files as a Markdown bundle with relative paths and code fences.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "cstayyab",
   "license": "MIT",
   "repository": {
@@ -88,5 +88,6 @@
     "typescript": "^5.5.4"
   },
   "main": "./dist/extension.js",
-  "files": ["dist/**", "package.json", "README.md", "LICENSE.md"]
+  "files": ["dist/**", "package.json", "README.md", "LICENSE.md", "images/**"],
+  "icon": "./images/icon.png"
 }
