@@ -89,5 +89,5 @@
   },
   "main": "./dist/extension.js",
   "files": ["dist/**", "package.json", "README.md", "LICENSE.md", "images/**"],
-  "icon": "./images/icon.png"
+  "icon": "images/icon.png"
 }
